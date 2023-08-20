@@ -377,5 +377,13 @@ const pizzas = [
 ];
 
 export default function Home() {
-  return <section>home</section>;
+  return <section>
+    <div className="container mx-auto">
+      <div className='grid grid-cols-2'>
+        {pizzas.map((pizza)=>{
+          return <Pizza pizza={pizza}/>
+        })}
+      </div>
+    </div>
+  </section>;
 }
