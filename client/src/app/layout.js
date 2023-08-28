@@ -24,7 +24,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${quicksand.variable} ${bangers.variable} ${robotoCondensed.variable} font-quicksand`}>
-        <h1 className='font-bangers text-8xl'>Headline 1</h1>
         {children}
         </body>
     </html>

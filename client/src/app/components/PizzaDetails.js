@@ -75,9 +75,15 @@ const PizzaDetails = ({pizza}) => {
             <CrustSelection crust={crust} setCrust={setCrust}/>
             {/* toppings */}
             <div className='mb-4 text-xl font-semibold'>Choose topping</div>
-            <div>
+            <div className='flex flex-1 flex-wrap gap-2 py-1 justify-center lg:justify-start'>
               {pizza.toppings?.map((topping, index) => {
-                return <Topping key={index}/>;
+                return (
+                  <Topping 
+                    topping={topping} 
+                    additionalTopping={additionalTopping} 
+                    setAdditionalTopping={setAdditionalTopping} 
+                    key={index}/>
+                );
               })}
             </div>
           </div>
